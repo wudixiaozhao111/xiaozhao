@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>小赵资源库</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
+  <!-- 引入 Docsify 的默认主题样式 (保持原版不变) -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+
+  <!-- 【新增】这里是专门用来调整宽度的 CSS 代码，复制进去即可 -->
+  <style>
+    /* 1. 把左侧菜单栏稍微加宽一点，默认太窄了 */
+    .sidebar {
+      width: 260px !important;
+    }
+    /* 2. 让右侧内容区域跟着往右挪，对齐菜单栏 */
+    .content {
+      left: 260px !important;
+    }
+    /* 3. 限制正文最大宽度，防止在大屏幕上字拉得太长（像电影屏幕） */
+    .markdown-section {
+      max-width: 850px !important;
+      padding: 30px 40px !important; /* 增加一点内边距，呼吸感更好 */
+    }
+    /* 4. 优化一下字体行高，看起来不累 */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script>
+    window.$docsify = {
+      // 这里保留你原来的设置
+      name: '小赵资源库',
+      repo: '',
+
+      // 【关键修改】开启侧边栏加载
+      loadSidebar: true,
+
+      // 【建议添加】限制侧边栏显示层级，不然目录太多会乱
+      subMaxLevel: 2,
+
+      // 【可选】开启封面页（如果你以后想弄个漂亮的首页图）
+      coverpage: false
+    }
+  </script>
+
+  <!-- Docsify v4 (保持原版引用不变) -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+</body>
+</html>
